@@ -1,0 +1,40 @@
+AMX
+Plane/AMX.png
+AMX
+
+Name: Embraer A-1 (AMX).
+Length: 13.23 m.
+Type: Ground-Attack / Strike.
+Wing span, main: 8.87 m.
+Height: 4.55 m.
+Wing area: 21.0 m2.
+Wheel base: 4.70 m.
+Empty weight: 6700 kg.
+Max Take-off weight: 13000 kg.
+Power plant: 1x Rolls-Royce Spey 807 non-afterburning turbofan engine, 49.1 kN thrust.
+
+Fuel capacity:
+Internal fuel: 939 US gal (3555 L).
+External fuel tanks: 2x 290 US gal (1100 L) inner wing tanks and 2x 153 US gal (580 L) outer wing tanks.
+
+Performance:
+Maximum speed: Mach 0.86, 568 kn (654 mph / 1053 km/h) at 10975 m (36000 ft).
+Service ceiling: 13000 m (42650 ft).
+Cruise speed: 510 kn (587 mph, 944 km/h).
+Combat range: 485 nmi (558 mi, 898 km) with 900 kg (2000 lb) of weapons.
+Rate of climb: 10240 ft/min (52.1 m/s).
+Lift-to-drag: N/A.
+Wing loading: 65.3 lb/sq ft (319 kg/m2) at normal weight.
+Thrust-to-weight: 0.47.
+Takeoff roll: 2500 ft (762 m) at normal load.
+Landing roll: 1500 ft (457 m) at normal weight.
+
+Armament:
+2× 30 mm Bernardini Mk-164 cannons (Brazilian version), 150 rounds per gun.
+Up to 8,380 lb (3,800 kg) of weapons on seven external hardpoints (1 under-fuselage, 4 under-wing, 2 wingtip).
+2× MAA-1 Piranha, A-Darter, or AIM-9 Sidewinder on wingtip rails.
+Un-guided bombs including Mk.82, Mk.83, and Mk.84 series.
+Laser-guided bombs (Lizard II, Paveway II).
+MAR-1 anti-radiation missiles (Brazilian versions).
+Mansup anti-ship missiles.
+Various rocket pods (e.g., SBAT 70) and reconnaissance pods.
