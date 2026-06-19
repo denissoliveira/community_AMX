@@ -76,9 +76,12 @@ dofile(current_mod_path .. "/Entry/Views.lua")
 dofile(current_mod_path .. '/Entry/loadout.lua')
 dofile(current_mod_path .. '/Entry/weapons.lua')
 dofile(current_mod_path .. '/Entry/AMX.lua')
+dofile(current_mod_path .. '/Entry/AMXT.lua')
 
 make_view_settings('AMX', ViewSettings, SnapViews)
-
 make_flyable('AMX', current_mod_path .. '/Cockpit/Scripts/', nil, current_mod_path .. '/Entry/comm.lua')
+
+make_view_settings('AMXT', ViewSettings, SnapViews)
+make_flyable('AMXT', current_mod_path .. '/Cockpit/Scripts/', nil, current_mod_path .. '/Entry/comm.lua')
 
 plugin_done()
