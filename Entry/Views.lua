@@ -1,9 +1,9 @@
 ViewSettings = {
 	Cockpit = {
 		[1] = { -- player slot 1
-			CockpitLocalPoint      = { 0.582, 0.506, 0.0 },
+			CockpitLocalPoint      = { 3.137, 0.787, 0.0 },
 			limits_6DOF            = { x = { 0.030000, 0.400000 }, y = { -0.300000, 0.100000 }, z = { -0.300000, 0.300000 }, roll = 90.000000 }, --Bewegen = hinten vorne,oben unten,links rechts
-			CameraViewAngleLimits  = { 20.000000, 140.000000 },
+			CameraViewAngleLimits  = { 10.000000, 140.000000 },
 			CameraAngleRestriction = { false, 90.000000, 0.400000 },
 			CameraAngleLimits      = {200,-90.000000,90.000000},--{ 190.000000, -75.000000, 115.000000 },
 			EyePoint               = { 0.05000, 0.100000, 0.000000 }, --{0.050000,0.500000,0.000000},

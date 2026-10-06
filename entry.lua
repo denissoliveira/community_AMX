@@ -60,32 +60,27 @@ declare_plugin(self_ID,
 
 	})
 
----------------------------------------------------------------------------------------
--- mounting shapes and textures libraries
-
-mount_vfs_sound_path(current_mod_path.."/Sounds")
-mount_vfs_texture_path(current_mod_path.."/Theme")
-mount_vfs_model_path(current_mod_path.."/Shapes")
 mount_vfs_texture_path(current_mod_path.."/Textures")
+mount_vfs_model_path(current_mod_path.."/Shapes")
+mount_vfs_texture_path(current_mod_path .. "/Cockpit/Textures/AMX_COCKPIT")
+mount_vfs_model_path(current_mod_path .. "/Cockpit/Shapes")
+mount_vfs_texture_path(current_mod_path.."/Theme")
 mount_vfs_liveries_path(current_mod_path.."/Liveries")
-mount_vfs_texture_path(current_mod_path .. "/Textures/Cockpit")
-
----------------------------------------------------------------------------------------
 
 dofile(current_mod_path .. "/Entry/Views.lua")
 dofile(current_mod_path .. '/Entry/loadout.lua')
-dofile(current_mod_path .. '/Entry/weapons.lua')
 
-dofile(current_mod_path .. '/Entry/Data/amx_engines_fm.lua')
+dofile(current_mod_path .. '/Entry/Data/amx_sensors.lua')
 dofile(current_mod_path .. '/Entry/Data/amx_gun_mount_fm.lua')
-dofile(current_mod_path .. '/Entry/Data/amx_lights_data_fm.lua')
 dofile(current_mod_path .. '/Entry/Data/amx_pilones_fm.lua')
 dofile(current_mod_path .. '/Entry/Data/AMX_SFM.lua')
+dofile(current_mod_path .. '/Entry/Data/criar_amx.lua')
 
 dofile(current_mod_path .. '/Entry/AMX.lua')
-dofile(current_mod_path .. '/Entry/AMXT.lua')
-dofile(current_mod_path .. '/Entry/AMX_M.lua')
-dofile(current_mod_path .. '/Entry/AMXT_M.lua')
+--dofile(current_mod_path .. '/Entry/AMXT.lua')
+--dofile(current_mod_path .. '/Entry/AMX_M.lua')
+--dofile(current_mod_path .. '/Entry/AMXT_M.lua')
+
 
 make_view_settings('AMX', ViewSettings, SnapViews)
 make_flyable('AMX', current_mod_path .. '/Cockpit/Scripts/', nil, current_mod_path .. '/Entry/comm.lua')

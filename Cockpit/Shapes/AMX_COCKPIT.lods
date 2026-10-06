@@ -1,0 +1,5 @@
+model = {
+	lods = {
+		{"AMX_COCKPIT.edm",20000.000000},
+	},
+}

@@ -14,7 +14,7 @@ AMX_SFM = {
         Czbe        =  -0.014,   -- along Z axis, affects yaw
         cx_gear     =   0.085,   -- drag coefficient, gear
         cx_flap     =   0.065,   -- drag coefficient, full flaps
-        cy_flap     =   0.85,    -- normal force coefficient, lift, flaps (Slotted STOL)
+        cy_flap     =   0.38,    -- Ajustado: valor seguro para a engine do SFM
         cx_brk      =   0.10,    -- drag coefficient, airbrakes
 
         table_data =
@@ -24,12 +24,12 @@ AMX_SFM = {
             [3]  = {0.400,  0.0260,     0.078,      0.0480,     0.160,      3.50,       23.0,       1.350},
             [4]  = {0.600,  0.0280,     0.082,      0.0520,     0.180,      3.50,       22.0,       1.400},
             [5]  = {0.750,  0.0310,     0.090,      0.0550,     0.190,      3.20,       20.0,       1.380},
-            -- Divergência de arrasto transônica (Barreira de Mach 0.95)
+            -- Divergência de arrasto transônica
             [6]  = {0.800,  0.0350,     0.095,      0.0600,     0.200,      3.00,       18.0,       1.350},
             [7]  = {0.850,  0.0500,     0.100,      0.0700,     0.250,      2.80,       16.0,       1.300},
             [8]  = {0.900,  0.0850,     0.090,      0.1000,     0.350,      2.50,       14.0,       1.200},
             [9]  = {0.950,  0.1500,     0.080,      0.1500,     0.400,      2.00,       12.0,       1.100},
-            -- Supersônico (Parede de arrasto)
+            -- Supersônico
             [10] = {1.000,  0.2800,     0.065,      0.2000,     0.500,      1.50,       10.0,       1.000},
             [11] = {1.050,  0.3500,     0.055,      0.2500,     0.600,      1.00,       10.0,       0.900},
             [12] = {1.100,  0.4500,     0.050,      0.3000,     0.700,      0.80,        9.0,       0.850},
@@ -38,22 +38,22 @@ AMX_SFM = {
         }, -- end of table_data
     }, -- end of aerodynamics
 
-    -- engine data (Rolls-Royce Spey RB.168 Mk 807 - Turbofan sem pós-combustor)
+    -- engine data (Rolls-Royce Spey RB.168 Mk 807 - Non-afterburning)
 
     engine =
     {
         Nmg     =   60,    -- RPM at idle
         MinRUD  =   0,     -- Min throttle
         MaxRUD  =   1,     -- Max throttle
-        MaksRUD =   1,     -- Military power state
-        ForsRUD =   1,     -- Afterburner state
-        typeng  =   0,     -- 0 = Turbojet/Turbofan non-afterburning
+        MaksRUD =   1,     -- Military power state (100% manete)
+        ForsRUD =   2,     -- Corrigido: Desativa engate de Pós-Combustão
+        typeng  =   0,     -- Turbojet/Turbofan
         hMaxEng =   13,    -- Max altitude in km
         dcx_eng =   0.0124,-- Engine drag coefficient
-        cemax   =   0.65,  -- SFC for AI route calculation
-        cefor   =   0.65,  -- SFC for AI route calculation
-        dpdh_m  =   1800,  -- Altitude thrust reduction coef (Military)
-        dpdh_f  =   1800,  -- Altitude thrust reduction coef (AB)
+        cemax   =   0.65,  -- SFC
+        cefor   =   0.65,  -- SFC
+        dpdh_m  =   1800,  -- Altitude thrust reduction coef
+        dpdh_f  =   1800,
 
         table_data =
         {   --  M       Pmax        Pfor
@@ -85,14 +85,14 @@ AMX_T_SFM =
     aerodynamics = -- Cx = Cx_0 + Cy^2*B + Cy^4*B4
     {
         Cy0         =   0,       -- zero AoA lift coefficient
-        Mzalfa      =   4.3,     -- Pitch agility (ligeiramente menor devido ao 2º cockpit/massa frontal)
-        Mzalfadt    =   0.8,     -- Pitch damping (maior estabilidade no eixo longitudinal)
+        Mzalfa      =   4.3,     -- Pitch agility
+        Mzalfadt    =   0.8,     -- Pitch damping
         kjx         =   3.80,    -- roll moment coefficient
-        kjz         =   0.00130, -- pitch moment coefficient (inércia de pitch maior)
+        kjz         =   0.00130, -- pitch moment coefficient
         Czbe        =  -0.014,   -- along Z axis, affects yaw
         cx_gear     =   0.085,   -- drag coefficient, gear
         cx_flap     =   0.065,   -- drag coefficient, full flaps
-        cy_flap     =   0.85,    -- normal force coefficient, lift, flaps
+        cy_flap     =   0.38,    -- Ajustado: valor seguro para a engine do SFM
         cx_brk      =   0.10,    -- drag coefficient, airbrakes
 
         table_data =
@@ -124,14 +124,14 @@ AMX_T_SFM =
         MinRUD  =   0,     -- Min throttle
         MaxRUD  =   1,     -- Max throttle
         MaksRUD =   1,     -- Military power state
-        ForsRUD =   1,     -- Afterburner state
-        typeng  =   0,     -- 0 = Turbojet/Turbofan non-afterburning
+        ForsRUD =   2,     -- Corrigido: Desativa engate de Pós-Combustão
+        typeng  =   0,     -- Turbojet/Turbofan
         hMaxEng =   13,    -- Max altitude in km
         dcx_eng =   0.0124,-- Engine drag coefficient
-        cemax   =   0.65,  -- SFC for AI route calculation
-        cefor   =   0.65,  -- SFC for AI route calculation
-        dpdh_m  =   1800,  -- Altitude thrust reduction coef (Military)
-        dpdh_f  =   1800,  -- Altitude thrust reduction coef (AB)
+        cemax   =   0.65,  -- SFC
+        cefor   =   0.65,  -- SFC
+        dpdh_m  =   1800,  -- Altitude thrust reduction coef
+        dpdh_f  =   1800,
 
         table_data =
         {   --  M       Pmax        Pfor
